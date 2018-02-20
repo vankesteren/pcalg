@@ -7,16 +7,16 @@ This is the repository for the data files of the [MSDSlab](https://msdatascience
 
 The `pcalg` package has some dependencies which have been removed from `CRAN`. To install the package, run the following in `R`.
 
-```r
+```R
 source("https://bioconductor.org/biocLite.R")
 biocLite(c("graph", "RBGL", "Rgraphviz"))
 install.packages("pcalg")
 ```
 
-## Dataset loading 
+## Dataset loading
 
 Here is how to load the data into `R`. Note that the `pcalg::pc()` function uses a list of sufficient statistics rather than the raw dataset.
-```r
+```R
 # Necessary git url for the location of the datasets (i.e. this repo)
 gitUrl <- "https://raw.githubusercontent.com/msdslab/pcalg/master/datasets/"
 
@@ -26,11 +26,11 @@ suffStat <- list(C = cor(dat), n = nrow(dat))
 
 ```
 
-# DAG estimation
+## DAG estimation
 
 For those who want a little head start, below an example analysis.
 
-```r
+```R
 library(pcalg)
 
 res <- pc(suffStat, labels = names(dat),

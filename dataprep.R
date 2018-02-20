@@ -17,5 +17,7 @@ selection <- sample(rep(1:k, each = nrow(d)/k))
 
 # write data to datasets folder
 for (i in 1:k) {
-  write.csv(d[selection == i,], file = paste0("./datasets/", i, ".csv"))
+  write.csv(x = d[selection == i,], 
+            file = paste0("./datasets/", i, ".csv"), 
+            row.names = FALSE)
 }

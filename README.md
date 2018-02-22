@@ -41,3 +41,5 @@ plot(res)
 # More information about the pc function
 ?pc
 ```
+
+Also try replacing `pc` with `skeleton` or `fci` (for the partial ancestral graph).
